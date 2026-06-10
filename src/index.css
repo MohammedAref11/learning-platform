@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-text font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-xl py-md bg-primary text-white rounded-md font-bold hover:opacity-90 transition-opacity duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply px-xl py-md bg-secondary text-white rounded-md font-bold hover:opacity-90 transition-opacity duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-secondary;
+  }
+  
+  .section-container {
+    @apply max-w-6xl mx-auto px-xl py-3xl;
+  }
+  
+  .card {
+    @apply bg-white bg-opacity-10 backdrop-blur-sm rounded-md p-xl border border-white border-opacity-10 hover:border-opacity-20 transition-colors duration-200;
+  }
+}
+
+/* GSAP Animation Classes */
+.fade-in {
+  opacity: 0;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+}
